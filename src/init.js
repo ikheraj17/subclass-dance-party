@@ -37,9 +37,11 @@ $(document).ready(function() {
     var left = 50;
     for (var i=0; i < window.dancers.length; i++) {
       var top = 50 + 50[i];
-      console.log('here', window.dancers[i]);
+      left += 5;
       window.dancers[i].lineUp(top, left);
     }
   });
+
+
 });
 

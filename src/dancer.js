@@ -9,6 +9,8 @@ MakeDancer.prototype.step = function () {
 };
 
 MakeDancer.prototype.setPosition = function(top, left) {
+  this.location = [top, left];
+  console.log(this.location);
   var styleSettings = {
     top: top,
     left:left
@@ -16,10 +18,3 @@ MakeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-//MakeDancer.prototype.lineUp = function (top, left) {
-  //this.setPosition(top, left);
-  // var styleSettings = {
-  //   left: left;
-  // }
-  // this.$node.css(styleSettings);
-//}

@@ -28,6 +28,11 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+.dancer:hover {
+  box-shadow: 5px 5px rgb(0, 255, 21);
+  /* border: 15px solid green; */
+}
+
 .sizing {
   border:10px solid rgb(0, 183, 255);
   animation-name: pulse_animation;
@@ -59,5 +64,9 @@ body, a:link, a:visited, a:active{
     to {
         transform:rotate(360deg);
     }
+}
+
+.hover {
+  border: 100px solid green;
 }
 
