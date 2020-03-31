@@ -27,7 +27,7 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-#sizing {
+.sizing {
   border:10px solid red;
   border-radius:10px;
   position:absolute;

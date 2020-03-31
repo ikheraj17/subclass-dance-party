@@ -1,6 +1,6 @@
 var MakeSizingDancer= function (top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="dancer" id="sizing"></span>');
+  this.$node = $('<span class="dancer" ="sizing"></span>');
 };
 
 MakeSizingDancer.prototype = Object.create(MakeDancer.prototype);
