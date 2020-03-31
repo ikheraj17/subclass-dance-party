@@ -34,7 +34,7 @@
 var MakeDancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
   this.step();
-  this.setPosition(top, left);
+  this.setPosition(top, left); //refactor later?
 };
 
 MakeDancer.prototype.step = function () {
