@@ -36,12 +36,36 @@ $(document).ready(function() {
   $('.lineUp').on('click', function(event){
     var left = 50;
     for (var i=0; i < window.dancers.length; i++) {
-      var top = 50 + 50[i];
+      var top = 50 + 50 * i;
       left += 5;
       window.dancers[i].lineUp(top, left);
+      console.log('locations', window.dancers[i].location)
     }
   });
 
+  $('.interact').on('click', function(event){
+    console.log('WOOT!');
+    dancerArr = window.dancers.slice(0);
 
+    for (var i = 0; i < dancerArr.length; i++) {
+      for (var j = 1; j < dancerArr.length; j++) {
+        var topDif = Math.abs(dancerArr[i].location[0] - dancerArr[j].location[0]);
+        var leftDif = Math.abs(dancerArr[i].location[1] - dancerArr[j].location[1]);
+        if (topDif < 5 && leftDif < 5) {
+          var newTop = Math.random() * 600;
+          var newLeft = Math.random() * 600;
+          dancerArr[i].setPosition(newTop, newLeft);
+          dancerArr[j].setPosition((newTop - 5), (newLeft + 5));
+          // newTop -= 25;
+          // newLeft -= 25;
+        }
+      }
+    }
+    //on click
+    //check location
+      //check location for nearest other 'dancer'
+    //change color to same color
+      //change location to cneter of dance floor to 'pair off'
+  });
 });
 
