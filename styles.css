@@ -9,7 +9,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton, .lineUp{
+.title, .addDancerButton, .lineUp, .interact{
   padding:5px 12px;
   float:right;
 }
@@ -66,7 +66,4 @@ body, a:link, a:visited, a:active{
     }
 }
 
-.hover {
-  border: 100px solid green;
-}
 
