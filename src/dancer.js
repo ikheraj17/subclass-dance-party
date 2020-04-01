@@ -18,3 +18,8 @@ MakeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
+MakeDancer.prototype.colorize = function () {
+
+  this.$node.css("border", "10px solid green");
+}
+

@@ -49,17 +49,25 @@ $(document).ready(function() {
 
     for (var i = 0; i < dancerArr.length; i++) {
       for (var j = 1; j < dancerArr.length; j++) {
-        var topDif = Math.abs(dancerArr[i].location[0] - dancerArr[j].location[0]);
-        var leftDif = Math.abs(dancerArr[i].location[1] - dancerArr[j].location[1]);
-        if (topDif < 5 && leftDif < 5) {
-          var newTop = Math.random() * 600;
-          var newLeft = Math.random() * 600;
+        let topDif = Math.abs(dancerArr[i].location[0] - dancerArr[j].location[0]);
+        let leftDif = Math.abs(dancerArr[i].location[1] - dancerArr[j].location[1]);
+
+        if (topDif <= 55 && leftDif <= 55 && i!==j) {
+          const newTop =  Math.random() * 600;
+          const newLeft = Math.random() * 600;
           dancerArr[i].setPosition(newTop, newLeft);
           dancerArr[j].setPosition((newTop - 5), (newLeft + 5));
+          dancerArr[i].colorize();
+          dancerArr[j].colorize();
+          //dancerArr.splice(i, 1);
+          //dancerArr.splice(j, 1);
           // newTop -= 25;
           // newLeft -= 25;
+
         }
+
       }
+
     }
     //on click
     //check location
